@@ -2102,3 +2102,15 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 237ms (Views: 200.7ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/authors/1/posts/1" for 69.4.88.172 at 2020-04-13 16:47:42 +0000
+Cannot render console from 69.4.88.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#post as HTML
+  Parameters: {"id"=>"1", "post_id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
+  
+app/controllers/authors_controller.rb:14:in `post'
